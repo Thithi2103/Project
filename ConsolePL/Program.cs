@@ -1,12 +1,17 @@
 ﻿using System;
+using System.IO;
+using DAL;
 
-namespace ConsolePL
+namespace PL_Console
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Dmmmmmmmmmmmmmmmmm");
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Menu menu = new Menu();
+            menu.MainMenu();
         }
     }
 }
+
