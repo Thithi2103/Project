@@ -85,27 +85,28 @@ DELIMITER ;
 
 -- insert data ---
 INSERT INTO `user` VALUES (1,'Hoàng Đình Thi','0964303957','hoangthi','123456'),(2,'Vũ Hải Đăng','012345689','haidang','123456');
-INSERT INTO `application` VALUES (1,'Flapy Bird','Game',2000.00,'Loop game','Nguyen Ha Dong','2018-07-18 21:39:52','5','★★★☆☆'),
-(2,'King of Crabs','Game',1000.00,'Action, Casual, Multiplayer','Robot Squid','2020-03-21','5','★★☆☆☆'),
-(3,'Dota2','Game',1000.00,'Action, Strategy','War','2018-07-18 22:00:36','7000','★★★★☆'),
-(4,'LOL','Game',1100.00,'game teamwork','Riot','2018-07-20 10:28:39','7000','★★★★★'),
-(5,'AOE','Game ',25000.00,'Action','Microsoft','2018-07-20 10:28:39','100000','★★★☆☆'),
-(6,'Call Of Duty','Game',200000.00,'Action, Adventure','Activision, Aspyr (Mac)','2018-07-20 10:35:19','200000','★★★★★'),
-(7,'Paladins','Game',1100.00,'teamwork','HiRez Studios','2018-07-20 20:54:51','4000','★★★☆☆'),
-(8,'CrossFire','Game',1100.00,'Multi-genre shooting','SmileGate','2018-07-20 20:54:51','6000','★★★★★'),
-(9,'PUBG','Game',30000.00,'Action, Adventure, Multiplayer','PUBG Corporation','2018-07-20 20:54:51','9000','★★★★☆'),
-(10,'MOTHERGUNSHIP','Game',20000.00,'Action, Adventure','Digital Grip','2018-07-20 20:54:51','7000','★★★☆☆'),
-(11,'Gladius Relics of war','Game',30000.00,'Action, Adventure, Multiplayer','Slitherine Ltd','2018-07-20 20:54:51','8000','★★☆☆☆'),
-(12,'Dig or Die ','Game',10000.00,'Action, Indie, Role Playing (RPG), Strategy','Game Gaddy','2018-07-20 20:54:51','3000','★★☆☆☆'),
-(13,'Super Sky Arena','Game',1000.00,'Action, Indie, Early Access','Hammer Labs, Deck13','2018-07-20 20:54:51','500','★★★☆☆'),
-(14,'PICO PARK','Game',1000.00,'Action, Casual, Indie','TECOPARK','2020-07-20 20:58:27','5000','★★★★★'),
-(15,'Fall Guys','Game','70000.00','Action, Casual, Indie, Massively Multiplayer, Sports','Mediatonic','2020-08-23','3000','★★★☆☆'),
-(16,'Bless Unleashed','Game','1200.00','Action, Massively Multiplayer, Role Playing (RPG)','NEOWIZ','2021-08-21','9000','★☆☆☆'),
-(17,'Counter-Strike: Global Offensive','Game','5000.00','Action','Valve','2012-08-22','40000','★★★☆☆'),
-(18,'ARK: Survival Evolved','Game','6000.00','Action, Adventure, Indie, Massively Multiplayer, Role Playing (RPG)',' Studio Wildcard','2017-08-28','50000','★★★☆☆'),
-(19,'Facebook','App','2000.00','Social network','Mark Zuckerberg','2004-9-14','1000','★★★☆☆')
+INSERT INTO `application` VALUES (11,'Flapy Bird','Game',2000.00,'loop game','Nguyen Ha Dong','2018-07-18 21:39:52','5','★★★☆☆'),
+(1,'Zalo','App',30000.00,'VoIP and Instant Messaging','Zalo Group, VNG','2018-07-20 20:54:51','8000','★★☆☆☆'),
+(2,'TeamView','App',10000.00,'Remote Control, Webinar','TeamViewer GmbH, Germany','2018-07-20 20:54:51','3000','★★☆☆☆'),
+(3,'Spotify','App',1000.00,'Music','Daniel Ek, Martin Lorentzon','2018-07-20 20:54:51','500','★★★☆☆'),
+(4,'Telegram','App',1000.00,'Instant message','Telegram FZ LLC, Telegram Messenger Inc','2020-07-20 20:58:27','5000','★★★★★'),
+(5,'Zoom','App','7000.00','Action, Casual, Indie, Massively Multiplayer, Sports','Eric Yuan','2020-11-1','3000','★★★☆☆'),
+(6,'Krita','App','1200.00','Krita Project','Krita Project','2018-10-6','9000','★★☆☆☆'),
+(7,'Discord','App','5000.00','VoIP, instant messaging, video chat, networking','Discord','2012-08-22','40000','★★★☆☆'),
+(8,'Adobe Photoshop','App','6000.00','Raster/Vector Graphics','Adobe Systems','2017-08-28','50000','★★★☆☆'),
+(9,'Facebook','App','2000.00','Social network','Mark Zuckerberg','2004-02-04','1000','★★★☆☆'),
+(20,'Adobe Premiere Pro','App',20000.00,'Video editing software','Adobe Systems','2018-10-12',20000,'★★★☆☆'),
+(12,'King of Crabs','Game',1000.00,'Action, Casual, Multiplayer','Robot Squid','2020-03-17','5','★★☆☆☆'),
+(13,'Dota2','Game',1000.00,'Action, Strategy','War','2018-07-18 22:00:36','7000','★★★★☆'),
+(14,'LOL','Game',1100.00,'game teamwork','Riot','2018-07-20 10:28:39','7000','★★★★★'),
+(15,'AOE','Game ',25000.00,'Action','Microsoft','2018-07-20 10:28:39','100000','★★★☆☆'),
+(16,'Call Of Duty','Game',200000.00,'Action, Adventure','Activision, Aspyr (Mac)','2018-07-20 10:35:19','200000','★★★★★'),
+(17,'Paladins','Game',1100.00,'teamwork','HiRez Studios','2018-07-20 20:54:51','4000','★★★☆☆'),
+(18,'CrossFire','Game',1100.00,'Multi-genre shooting','SmileGate','2018-07-20 20:54:51','6000','★★★★★'),
+(19,'PUBG','Game',30000.00,'Action, Adventure, Multiplayer','PUBG Corporation','2018-07-20 20:54:51','9000','★★★★☆')
+
 ;
-INSERT INTO `payment` VALUES (1,1,'By Store',1000000),(2,2,'Visa',0),(3,1,'VietinBank',0);
+INSERT INTO `payment` VALUES (1,1,'By Store',1000000),(2,2,'Visa',0),(3,1,'VietinBank',0),(1,2,'By Store',1000000);
 INSERT INTO `bill`(app_id, user_id, payment_id, unitprice) values (2, 1, 1, 10000.00);
 
 
