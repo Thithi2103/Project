@@ -115,3 +115,28 @@ static void ViewLaptopDetails()
                 Console.WriteLine(" ┌---------------------------------------┐");
                 Console.WriteLine(" |Login...                               |");
                 Console.WriteLine(" └---------------------------------------┘");
+
+
+
+
+                if (username.Length == 0) {
+                        Console.Write ("  * Username: ");
+                        username = Console.ReadLine ();
+                    } else {
+                        Console.WriteLine ("  | Username: " + username);
+                    }
+                    if (password.Length == 0) {
+                        Console.Write ("  * Password: " + new string ('*', p.Length));
+                        key = Console.ReadKey ();
+                        if (key.Key == ConsoleKey.Enter) {
+                            password = p;
+                            break;
+                        } else if (key.Key == ConsoleKey.Backspace) {
+                            if (p.Length != 0)
+                                p = p.Remove (p.Length - 1);
+                        } else p += key.KeyChar;
+                    } else {
+                        break;
+                    }
+
+                    Console.WriteLine ("  | Password: " + new string ('*', password.Length));
