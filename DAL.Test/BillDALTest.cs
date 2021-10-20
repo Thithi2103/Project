@@ -55,6 +55,13 @@ namespace DAL.Test
                 UnitPrice = ApplicationDAL.GetApplicationById(1).Price * 0.5,
             };
             Assert.False(CreateBill(bill));
+            bill = new Bill()
+            {
+                App = ApplicationDAL.GetApplicationById(7),
+                User = UserDAL.GetUserById(100),
+                UnitPrice = ApplicationDAL.GetApplicationById(1).Price * 0.5,
+            };
+            Assert.False(CreateBill(bill));
 
         }
         [Theory]

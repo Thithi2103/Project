@@ -121,7 +121,7 @@ public class Menu {
                     string line3 = "------------------------------------------------------------------└---------"; 
                     string title = "Ⓜ Ⓐ Ⓡ Ⓚ Ⓔ Ⓣ  Ⓐ ⓟ ⓟ  Ⓢ Ⓣ Ⓞ Ⓡ Ⓔ";
                     string title1 = "Search Application";
-                    string title6 = "Search application by ID";
+                    string title6 = "Search Application by ID";
                     string title2 = "My Appliction";
                     string title3 = "History Trade";
                     string title4 = "Log out";
@@ -205,9 +205,10 @@ public class Menu {
                             isExit = true;
                             break;
                         } else if (key.Key == ConsoleKey.Enter) {
-                            if(listApp.Count <= 0)
+                            if(listApp.Count <=  0)
                             {
-                                Console.Write("Not found!");
+                            
+                                Console.WriteLine("Not found!");
                             }
                             else if(listApp.Count == 1)
                             {
@@ -237,8 +238,7 @@ public class Menu {
                 int ichoice;
                 string appId = "";
                 string line = "----------------------------------------------------------------------------";
-                List<Application> listApp = new List<Application>();
-                
+                List<Application> listApp = new List<Application>();  
                 Console.Clear();
                 DisplayApplication();
                 Console.WriteLine(" ┌{0}┐", line);
@@ -247,13 +247,16 @@ public class Menu {
                 listApp = AppBl.SearchApplicationByName(appId);
                 Console.SetCursorPosition(30 + appId.Length, 14);
                 string schoice = Console.ReadLine ();
+                if(listApp.Count <= 0)
+                        
+                             Console.WriteLine("Not found!");
+
                     if (int.TryParse (schoice, out ichoice)) {
                         if(ichoice == 0)
                             break;
                         if (ichoice >= 1 && ichoice <= listApp.Count) {
                             listApp = AppBl.SearchApplicationByName(appId);
                             DisplayAnApp (listApp[ichoice - 1]);
-                            break;
                         }
                     }
                     if (isExit == true) break;
@@ -292,9 +295,13 @@ public class Menu {
                     bool isOwn = false;
                     string size;
                     string line = "----------------------------------------------------------------------------";
+                    string title = "Ⓜ Ⓐ Ⓡ Ⓚ Ⓔ Ⓣ  Ⓐ ⓟ ⓟ  Ⓢ Ⓣ Ⓞ Ⓡ Ⓔ";
                     int lengthLine = line.Length + 2;
                     int position = lengthLine / 2 + app.Name.Length / 2 - 1;
+                    int position2 = lengthLine / 2 + title.Length / 2 - 1;
                     Console.Clear ();
+                    Console.WriteLine("┌{0}┐", line);
+                    Console.WriteLine("│{0," + position2 + "}{1," + (lengthLine - position2 - 1) + "}", title, "│");
                     Console.WriteLine("┌{0}┐", line);
                     Console.WriteLine("│{0," + position + "}{1," + (lengthLine - position - 1) + "}", app.Name, "│");
                     Console.WriteLine("├{0}┤", line);
@@ -343,9 +350,13 @@ public class Menu {
                     int ichoice;
                     string line = "-------------------------------------------------------------------------";
                     string title = "Buy Application";
+                    string title2 = "Ⓜ Ⓐ Ⓡ Ⓚ Ⓔ Ⓣ  Ⓐ ⓟ ⓟ  Ⓢ Ⓣ Ⓞ Ⓡ Ⓔ";
                     int lengthLine = line.Length + 2;
+                    int position2 = lengthLine / 2 + title2.Length / 2 - 1;
                     int position = lengthLine / 2 + title.Length / 2 - 1;
                     Console.Clear();
+                    Console.WriteLine("┌{0}┐", line);
+                    Console.WriteLine("│{0," + position2 + "}{1," + (lengthLine - position2 - 1) + "}", title2, "│");
                     Console.WriteLine("┌{0}┐", line);
                     Console.WriteLine("│{0," + position + "}{1," + (lengthLine - position - 1) + "}", title, "│");
                     Console.WriteLine("├{0}┤", line);
@@ -392,7 +403,13 @@ public class Menu {
                                         if(checkCreate)
                                         {
                                             Console.Clear();
-                                            Console.WriteLine($"Buy {app.Name} !\nSuccessful\n\nPress anykey to return...");
+                                            Console.WriteLine("┌{0}┐", line);
+                                            Console.WriteLine("│{0," + position2 + "}{1," + (lengthLine - position2 - 1) + "}", title2, "│");
+                                            Console.WriteLine("├{0}┤", line);
+                                            Console.WriteLine($"|Buy {app.Name + "!",-68} |");
+                                            Console.WriteLine($"{"|Successful",-73} |");
+                                            Console.WriteLine("└{0}┘", line);
+                                            Console.WriteLine("\n  Press anykey to return...");
                                             Console.ReadKey();
                                             isExit = true;
                                         }
@@ -400,7 +417,12 @@ public class Menu {
                                     catch
                                     {
                                         Console.Clear();
-                                        Console.WriteLine("Not Successful\n\nPress anykey to return...");
+                                        Console.WriteLine("┌{0}┐", line);
+                                        Console.WriteLine("│{0," + position2 + "}{1," + (lengthLine - position2 - 1) + "}", title2, "│");
+                                        Console.WriteLine("├{0}┤", line);
+                                        Console.WriteLine($"{"| Not Successful",-69} |");
+                                        Console.WriteLine("└{0}┘", line);
+                                        Console.WriteLine("\n  Press anykey to return...");
                                         Console.ReadKey();
                                     }
                                 }
@@ -414,7 +436,12 @@ public class Menu {
                             else
                             {
                                 Console.Clear();
-                                Console.WriteLine("This payment havent been updated!\n\nPress anykey to return...");
+                                Console.WriteLine("┌{0}┐", line);
+                                Console.WriteLine("│{0," + position2 + "}{1," + (lengthLine - position2 - 1) + "}", title2, "│");
+                                Console.WriteLine("├{0}┤", line);
+                                Console.WriteLine($"{"| This payment havent been updated!",-73} |");
+                                Console.WriteLine("└{0}┘", line);
+                                Console.WriteLine("\n  Press anykey to return...");
                                 Console.ReadKey();
                             }
                         }
@@ -426,12 +453,18 @@ public class Menu {
             void DisplayMyApplications () {
                 while(true)
                 {
-                    string line = "---------------------------------------------------";
+                    string line = "-------------------------------------------------------------------------";
                     string line2 = "-------------------------------------------------------------------------";
                     string title = "App Bounght";
+                    string title3 = "Information ";
+                    string title2 = "Ⓜ Ⓐ Ⓡ Ⓚ Ⓔ Ⓣ  Ⓐ ⓟ ⓟ  Ⓢ Ⓣ Ⓞ Ⓡ Ⓔ";
                     int lengthLine = line.Length + 2;
                     int position = lengthLine / 2 + title.Length / 2 - 1;
+                    int position2 = lengthLine / 2 + title2.Length / 2 - 1;
+                    int position3 = lengthLine / 2 + title3.Length / 2 - 1;
                     Console.Clear ();
+                    Console.WriteLine("┌{0}┐", line);
+                    Console.WriteLine("│{0," + position2 + "}{1," + (lengthLine - position2 - 1) + "}", title2, "│");
                     Console.WriteLine("┌{0}┐", line);
                     Console.WriteLine("│{0," + position + "}{1," + (lengthLine - position - 1) + "}", title, "│");
                     Console.WriteLine("├{0}┤", line);
@@ -444,9 +477,9 @@ public class Menu {
                     }
                     Console.WriteLine("└{0}┘", line);
                     
-                        Console.WriteLine(new string(' ', 15) + " ┌---------------------┐");
-                        Console.WriteLine(new string(' ', 15) + " |      0. Return      |");
-                        Console.WriteLine(new string(' ', 15) + " └---------------------┘");
+                        Console.WriteLine(new string(' ', 25) + " ┌---------------------┐");
+                        Console.WriteLine(new string(' ', 25) + " |      0. Return      |");
+                        Console.WriteLine(new string(' ', 25) + " └---------------------┘");
                     Console.Write("\n  Choice... ");
                     string choice = Console.ReadLine();
                     int ichoice;
@@ -457,6 +490,10 @@ public class Menu {
                         if(ichoice <= listApp.Count)
                         {
                             Console.Clear ();
+                            Console.WriteLine(" ┌{0}┐", line);
+                            Console.WriteLine(" │{0," + position2 + "}{1," + (lengthLine - position2 - 1) + "}", title2, "│");
+                            Console.WriteLine(" ┌{0}┐", line);
+                            Console.WriteLine(" │{0," + position3 + "}{1," + (lengthLine - position3 - 1) + "}", title3, "│");
                             Console.WriteLine(" ┌{0}┐", line2);
                             Console.WriteLine ($" |Application Name : {listApp[ichoice-1].Name,-53} |");
                             Console.WriteLine ($" |Kind             : {listApp[ichoice-1].Kind,-53} |");
@@ -475,18 +512,23 @@ public class Menu {
                 }
             }
             void DisplayHistoryTrade () {
-                string line = "--------┐---------------------┐--------------┐-------------------------";
-                string end = "-----------------------------------------------------------------------"; 
-                string end2 = "--------┘---------------------┘--------------┘-------------------------";
+                string line = "--------┐---------------------┐--------------┐--------------------------";
+                string end = "------------------------------------------------------------------------"; 
+                string line1 = "------------------------------------------------------------------------";
+                string end2 = "--------┘---------------------┘--------------┘--------------------------";
                 string title = "History Trade";
                 int lengthLine = line.Length + 2;
                 int position = lengthLine / 2 + title.Length / 2 - 1;
+                string title2 = "Ⓜ Ⓐ Ⓡ Ⓚ Ⓔ Ⓣ  Ⓐ ⓟ ⓟ  Ⓢ Ⓣ Ⓞ Ⓡ Ⓔ";
+                int position2 = lengthLine / 2 + title2.Length / 2 - 1;
                 Console.Clear ();
+                Console.WriteLine("┌{0}┐", line1);
+                Console.WriteLine("│{0," + position2 + "}{1," + (lengthLine - position2 - 1) + "}", title2, "│");
                 Console.WriteLine("┌{0}┐", end);
                 Console.WriteLine("│{0," + position + "}{1," + (lengthLine - position - 1) + "}", title, "│");
                 Console.WriteLine("├{0}┤", line);
                 List<Bill> listBill = BillBl.GetListBillByUserID(userOnline.User_ID);
-                Console.WriteLine("|BillID  |Appliction           |Price         |Date                     |");
+                Console.WriteLine("|BillID  |Appliction           |Price         |Date                      |");
                 Console.WriteLine("└{0}┘", end2);
                 foreach(var x in listBill)
                 {

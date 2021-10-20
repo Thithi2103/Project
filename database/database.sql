@@ -85,7 +85,7 @@ DELIMITER ;
 
 -- insert data ---
 INSERT INTO `user` VALUES (1,'Hoàng Đình Thi','0964303957','hoangthi','123456'),(2,'Vũ Hải Đăng','012345689','haidang','123456');
-INSERT INTO `application` VALUES (11,'Flapy Bird','Game',2000.00,'loop game','Nguyen Ha Dong','2018-07-18 21:39:52','5','★★★☆☆'),
+INSERT INTO `application` VALUES 
 (1,'Zalo','App',30000.00,'VoIP and Instant Messaging','Zalo Group, VNG','2018-07-20 20:54:51','8000','★★☆☆☆'),
 (2,'TeamView','App',10000.00,'Remote Control, Webinar','TeamViewer GmbH, Germany','2018-07-20 20:54:51','3000','★★☆☆☆'),
 (3,'Spotify','App',1000.00,'Music','Daniel Ek, Martin Lorentzon','2018-07-20 20:54:51','500','★★★☆☆'),
@@ -95,15 +95,17 @@ INSERT INTO `application` VALUES (11,'Flapy Bird','Game',2000.00,'loop game','Ng
 (7,'Discord','App','5000.00','VoIP, instant messaging, video chat, networking','Discord','2012-08-22','40000','★★★☆☆'),
 (8,'Adobe Photoshop','App','6000.00','Raster/Vector Graphics','Adobe Systems','2017-08-28','50000','★★★☆☆'),
 (9,'Facebook','App','2000.00','Social network','Mark Zuckerberg','2004-02-04','1000','★★★☆☆'),
-(20,'Adobe Premiere Pro','App',20000.00,'Video editing software','Adobe Systems','2018-10-12',20000,'★★★☆☆'),
-(12,'King of Crabs','Game',1000.00,'Action, Casual, Multiplayer','Robot Squid','2020-03-17','5','★★☆☆☆'),
-(13,'Dota2','Game',1000.00,'Action, Strategy','War','2018-07-18 22:00:36','7000','★★★★☆'),
-(14,'LOL','Game',1100.00,'game teamwork','Riot','2018-07-20 10:28:39','7000','★★★★★'),
-(15,'AOE','Game ',25000.00,'Action','Microsoft','2018-07-20 10:28:39','100000','★★★☆☆'),
-(16,'Call Of Duty','Game',200000.00,'Action, Adventure','Activision, Aspyr (Mac)','2018-07-20 10:35:19','200000','★★★★★'),
-(17,'Paladins','Game',1100.00,'teamwork','HiRez Studios','2018-07-20 20:54:51','4000','★★★☆☆'),
-(18,'CrossFire','Game',1100.00,'Multi-genre shooting','SmileGate','2018-07-20 20:54:51','6000','★★★★★'),
-(19,'PUBG','Game',30000.00,'Action, Adventure, Multiplayer','PUBG Corporation','2018-07-20 20:54:51','9000','★★★★☆')
+(11,'Smart Home Design','App',2000.00,'Simulation, Design and illustration','Sebastian Kemper','2021-08-31','100','★★★☆☆'),
+(10,'Sky Creator','App',20000.00,'Design and illustration, Utilities','Knife Entertainment','2017-10-12',3215,'★★★☆☆'), 
+(12,'Live2DViewerEX','App',1000.00,'Animation and modeling, Gadgets, Early Access','Pavo Studio','2020-03-17','213','★★☆☆☆'),
+(13,'SVFI','App',1000.00,'Design and illustration, Image editing','Pavo Studio','2018-07-18','7000','★★★★☆'),
+(14,'Midinous','App',1100.00,'Audio Production, Utilities','Nornec','2018-07-20','7000','★★★★★'),
+(15,'AudioTheory Piano Keys','App ',25000.00,'Audio Production, Education, Utilities','Draculas Cave','2018-07-20','100000','★★★☆☆'),
+(16,'Loop Timer','App',200000.00,'Simple, Indie','yntoo','2018-07-20','200000','★★★★★'),
+(17,'LunarManVideoLibrary','App',1100.00,'Utilities','LunarManStudio','2018-07-20','4000','★★★☆☆'),
+(18,'Mavis Beacon Keyboarding Kidz','App',1100.00,'Simple, Education','Encore Software','2018-07-20','6000','★★★★★'),
+(19,'NewTaskbar','App',30000.00,'Action, Adventure, Multiplayer','Aaron Dos Santos','2018-07-20','9000','★★★★☆'),
+(20,'Adobe Premiere Pro','App',20000.00,'Utilities','Adobe Systems','2018-10-12',20000,'★★★☆☆')
 
 ;
 INSERT INTO `payment` VALUES (1,1,'By Store',1000000),(2,2,'Visa',0),(3,1,'VietinBank',0),(1,2,'By Store',1000000);

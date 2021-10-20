@@ -8,14 +8,23 @@ namespace DAL.Test
 {
     public class ApplicationDALTest : ApplicationDAL
     {
-        [Theory]
-        [InlineData("flapy")]
-        [InlineData("")]
-        void GetApplicationByName_Test_True(string nameApp)
-        {
-            List<Application> result = ApplicationDAL.GetApplicationByName(nameApp);
-            Assert.True(result.Count > 0);
-        }
+        // [Theory]
+        // [InlineData("flapy")]
+        // [InlineData("")]
+        // // void GetApplicationByName_Test_True(string nameApp)
+        // // {
+        // //     List<Application> result = ApplicationDAL.GetApplicationByName(nameApp);
+        // //     Assert.True(result.Count > 0);
+        // // }
+
+        // [Theory]
+        // [InlineData("flapy")]
+        // [InlineData("facebook")]
+        // void GetApplicationByName_Test_True2(string nameApp)
+        // {
+        //     List<Application> result = ApplicationDAL.GetApplicationByName(nameApp);
+        //     Assert.True(result.Count > 0);
+        // }
 
         [Fact]
         void GetApplication_TestFDM()
@@ -56,6 +65,32 @@ namespace DAL.Test
         {
             Assert.Empty(GetApplicationBoughtByUserID(id));
         }
+
+        [Theory]
+        [InlineData(-1)]
+        [InlineData(1000000)]
+        void GetApplicationBoughtByUserID_Test_Fail2(int id)
+        {
+            Assert.Empty(GetApplicationBoughtByUserID(id));
+        }
+
+        [Theory]
+        [InlineData(0)]
+        [InlineData(1000000)]
+        void GetApplicationBoughtByUserID_Test_Fail3(int id)
+        {
+            Assert.Empty(GetApplicationBoughtByUserID(id));
+        }
+
+        [Theory]
+        [InlineData(0)]
+        [InlineData(-1)]
+        [InlineData(1000000)]
+        void GetApplicationBoughtByUserID_Test_Fail4(int id)
+        {
+            Assert.Empty(GetApplicationBoughtByUserID(id));
+        }
+
 
         Application GetApplication_Test(string query)
         {
